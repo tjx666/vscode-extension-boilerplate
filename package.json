@@ -3,7 +3,7 @@
     "displayName": "VSCode extension boilerplate",
     "version": "0.0.1",
     "preview": false,
-    "description": "the boilerplate for VSCode extension development",
+    "description": "An awesome boilerplate for VSCode extension development",
     "publisher": "YuTengjing",
     "author": {
         "name": "YuTengjing",
@@ -45,12 +45,14 @@
         "vscode-extension-boilerplate",
         "boilerplate"
     ],
-    "activationEvents": [],
+    "activationEvents": [
+        "onCommand:VSCodeExtensionBoilerplate.helloVSCode"
+    ],
     "main": "./out/extension.js",
     "contributes": {
         "commands": [
             {
-                "command": "VSCodeExtensionBoilerplate.elloVSCode",
+                "command": "VSCodeExtensionBoilerplate.helloVSCode",
                 "title": "Hello Visual Studio Code!"
             }
         ]
@@ -67,7 +69,7 @@
     },
     "husky": {
         "hooks": {
-            "pre-commit": ""
+            "pre-commit": "lint-staged"
         }
     },
     "lint-staged": {
@@ -79,8 +81,7 @@
             "git add"
         ]
     },
-    "dependencies": {
-    },
+    "dependencies": {},
     "devDependencies": {
         "@types/glob": "^7.1.1",
         "@types/mocha": "^5.2.7",
@@ -97,7 +98,7 @@
         "eslint": "^6.7.2",
         "eslint-config-airbnb-base": "^14.0.0",
         "eslint-config-prettier": "^6.7.0",
-        "eslint-plugin-import": "^2.18.2",
+        "eslint-plugin-import": "2.18.2",
         "eslint-plugin-prettier": "^3.1.1",
         "glob": "^7.1.5",
         "husky": "^3.1.0",
