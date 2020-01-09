@@ -2,7 +2,7 @@
     "name": "vscode-extension-boilerplate",
     "displayName": "VSCode extension boilerplate",
     "version": "0.0.1",
-    "preview": false,
+    "preview": true,
     "description": "An awesome boilerplate for VSCode extension development",
     "publisher": "YuTengjing",
     "author": {
@@ -34,7 +34,7 @@
         "url": "https://github.com/tjx666/vscode-extension-boilerplate"
     },
     "engines": {
-        "vscode": "^1.40.0"
+        "vscode": "^1.37.0"
     },
     "categories": [
         "Other"
@@ -88,7 +88,7 @@
         "@types/mocha": "^5.2.7",
         "@types/node": "^13.1.5",
         "@types/terser-webpack-plugin": "^2.2.0",
-        "@types/vscode": "^1.41.0",
+        "@types/vscode": "1.37.0",
         "@types/webpack": "^4.41.2",
         "@types/webpack-merge": "^4.1.5",
         "@types/yargs": "^15.0.0",
