@@ -1,9 +1,6 @@
 {
-    "files.exclude": {
-        "out": false
-    },
     "search.exclude": {
-        "out": true
-    },
-    "typescript.tsc.autoDetect": "off"
+        "out": true,
+        "test-fixture": true
+    }
 }
