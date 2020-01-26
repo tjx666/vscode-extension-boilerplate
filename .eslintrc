@@ -12,37 +12,38 @@
     },
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
-        "ecmaVersion": 2018,
+        "ecmaVersion": 2020,
         "sourceType": "module"
     },
     "plugins": ["@typescript-eslint"],
     "settings": {
         "import/resolver": {
             "node": {
-                "extensions": [".js", ".jsx", ".json", ".ts", ".tsx"]
+                "extensions": [".ts"]
             }
         }
     },
     "rules": {
         "prettier/prettier": "off",
 
+        "import/extensions": "off",
+        "import/no-unresolved": ["warn", { "ignore": ["vscode"] }],
+
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/no-non-null-assertion": "off",
+
         "func-names": "off",
+        "no-bitwise": "off",
         "no-console": "off",
         "no-param-reassign": "off",
         "no-plusplus": "off",
-
-        "import/no-unresolved": ["warn", { "ignore": ["vscode"] }],
-        "import/extensions": "off",
-
-        "@typescript-eslint/explicit-function-return-type": "off",
-        "@typescript-eslint/no-non-null-assertion": "off",
-        "@typescript-eslint/no-explicit-any": "off"
+        "no-unused-expressions": "off"
     },
     "overrides": [
         {
             "files": ["test/**/*.ts"],
             "rules": {
-                "consistent-return": "off",
                 "import/prefer-default-export": "off"
             }
         },

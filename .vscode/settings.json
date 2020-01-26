@@ -1,6 +1,16 @@
 {
     "search.exclude": {
+        "**/node_modules": true,
         "out": true,
-        "test-fixture": true
+        "test-fixture": true,
+        ".vscode-test": true
+    },
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/*/**": true,
+        "out": true,
+        "test-fixture": true,
+        ".vscode-test": true
     }
 }
