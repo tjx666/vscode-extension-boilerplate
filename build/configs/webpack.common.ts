@@ -34,7 +34,11 @@ const commonWebpackConfig: Configuration = {
         ],
     },
     plugins: [
-        new BannerPlugin('vscode-extension-boilerplate is developed by YuTengjing under MIT license'),
+        new BannerPlugin({
+            banner:
+                '/** @preserve powered by vscode-extension-boilerplate(https://github.com/tjx666/vscode-extension-boilerplate) */',
+            raw: true,
+        }),
         new WebpackBar({
             name: 'VSCode extension',
             color: '#0066B8',
