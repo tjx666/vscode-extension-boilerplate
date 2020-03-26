@@ -15,5 +15,10 @@ compiler.run((error, stats) => {
         return;
     }
 
-    console.log(stats.toString(isProd ? 'normal' : 'minimal'));
+    const prodStats = {
+        preset: 'normal',
+        colors: true,
+    };
+
+    console.log(stats.toString(isProd ? prodStats : 'minimal'));
 });

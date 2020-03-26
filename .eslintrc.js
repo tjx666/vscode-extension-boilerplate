@@ -13,6 +13,7 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
         'plugin:unicorn/recommended',
         'prettier',
+        'prettier/@typescript-eslint',
     ],
     globals: {
         Atomics: 'readonly',
@@ -23,17 +24,15 @@ module.exports = {
         ecmaVersion: 2020,
         sourceType: 'module',
     },
-    plugins: ['@typescript-eslint'],
+    plugins: ['@typescript-eslint', 'unicorn'],
     settings: {
         'import/resolver': {
             node: {
-                extensions: ['.ts'],
+                extensions: ['.ts', '.js', '.json'],
             },
         },
     },
     rules: {
-        'prettier/prettier': OFF,
-
         'import/extensions': OFF,
         'import/no-unresolved': [WARN, { ignore: ['vscode'] }],
 
