@@ -2,8 +2,6 @@ import { resolve } from 'path';
 import { Configuration, BannerPlugin } from 'webpack';
 import WebpackBar from 'webpackbar';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
-import CaseSensitivePathsPlugin from 'case-sensitive-paths-webpack-plugin';
-import CircularDependencyPlugin from 'circular-dependency-plugin';
 import HardSourceWebpackPlugin from 'hard-source-webpack-plugin';
 import FriendlyErrorsPlugin from 'friendly-errors-webpack-plugin';
 
@@ -45,13 +43,6 @@ const commonWebpackConfig: Configuration = {
         }),
         new FriendlyErrorsPlugin(),
         new CleanWebpackPlugin(),
-        new CaseSensitivePathsPlugin(),
-        new CircularDependencyPlugin({
-            exclude: /node_modules/,
-            failOnError: true,
-            allowAsyncCycles: false,
-            cwd: projectRoot,
-        }),
         new HardSourceWebpackPlugin({
             info: { mode: 'none', level: 'warn' },
         }),

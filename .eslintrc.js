@@ -8,7 +8,12 @@ module.exports = {
         node: true,
         mocha: true,
     },
-    extends: ['airbnb-base', 'plugin:@typescript-eslint/recommended', 'prettier'],
+    extends: [
+        'airbnb-base',
+        'plugin:@typescript-eslint/recommended',
+        'plugin:unicorn/recommended',
+        'prettier',
+    ],
     globals: {
         Atomics: 'readonly',
         SharedArrayBuffer: 'readonly',
@@ -35,6 +40,20 @@ module.exports = {
         '@typescript-eslint/explicit-function-return-type': OFF,
         '@typescript-eslint/no-explicit-any': OFF,
         '@typescript-eslint/no-non-null-assertion': OFF,
+
+        'unicorn/consistent-function-scoping': OFF,
+        'unicorn/filename-case': [
+            ERROR,
+            {
+                cases: {
+                    camelCase: true,
+                    pascalCase: true,
+                },
+            },
+        ],
+        'unicorn/no-abusive-eslint-disable': OFF,
+        'unicorn/no-process-exit': OFF,
+        'unicorn/prevent-abbreviations': OFF,
 
         'func-names': OFF,
         'no-bitwise': OFF,
