@@ -1,5 +1,5 @@
 import { resolve } from 'path';
-import { Configuration, BannerPlugin } from 'webpack';
+import { Configuration } from 'webpack';
 import WebpackBar from 'webpackbar';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import HardSourceWebpackPlugin from 'hard-source-webpack-plugin';
@@ -32,11 +32,6 @@ const commonWebpackConfig: Configuration = {
         ],
     },
     plugins: [
-        new BannerPlugin({
-            banner:
-                '/** @preserve powered by vscode-extension-boilerplate(https://github.com/tjx666/vscode-extension-boilerplate) */',
-            raw: true,
-        }),
         new WebpackBar({
             name: 'VSCode extension',
             color: '#0066B8',
