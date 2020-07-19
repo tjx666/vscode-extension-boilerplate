@@ -8,3 +8,4 @@ example extensions:
 
 1. [View GitHub Repository](https://github.com/tjx666/view-github-repository)
 2. [Open in External App](https://github.com/tjx666/open-in-external-app)
+3. [VSCode Fe Helper](https://github.com/tjx666/vscode-fe-helper)

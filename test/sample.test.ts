@@ -1,4 +1,4 @@
-import { equal } from 'assert';
+import { strictEqual } from 'assert';
 import * as vscode from 'vscode';
 
 describe('# test sample', () => {
@@ -7,7 +7,7 @@ describe('# test sample', () => {
     });
 
     it('one plus one equals two', () => {
-        equal(2, 1 + 1);
+        strictEqual(2, 1 + 1);
     });
 
     after(() => {

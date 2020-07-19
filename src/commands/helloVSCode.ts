@@ -1,6 +1,7 @@
-import * as vscode from 'vscode';
+/* eslint-disable unicorn/filename-case */
+import vscode from 'vscode';
 
-function handler() {
+function handler(): void {
     vscode.window.showInformationMessage('Hello Visual Studio Code!');
 }
 

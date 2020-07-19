@@ -14,7 +14,8 @@ import { runTests } from 'vscode-test';
             extensionTestsPath,
             launchArgs: [testWorkspace],
         });
-    } catch (err) {
+    } catch (error) {
+        console.error(error);
         console.error('Failed to run tests');
         process.exit(1);
     }
