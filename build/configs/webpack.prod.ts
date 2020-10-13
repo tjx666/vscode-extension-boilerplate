@@ -23,7 +23,7 @@ const mergedConfiguration: Configuration = merge(commonWebpackConfig, {
                 cache: true,
                 parallel: true,
                 extractComments: false,
-            }),
+            }) as any,
         ],
     },
 });
