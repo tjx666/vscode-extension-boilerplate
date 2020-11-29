@@ -50,7 +50,7 @@
     "scripts": {
         "vscode:prepublish": "yarn build",
         "compile": "cross-env NODE_ENV=development ts-node --files -P ./build/tsconfig.json ./build",
-        "test-compile": "tsc -p ./test/tsconfig.test.json",
+        "test-compile": "tsc -p ./test/tsconfig.json",
         "build": "cross-env NODE_ENV=production ts-node --files -P ./build/tsconfig.json ./build",
         "build-analyze": "yarn build --analyze",
         "lint": "eslint -c .eslintrc.js --ext .ts ./{build,src,test}/**/*.ts",
