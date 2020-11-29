@@ -10,8 +10,7 @@ module.exports = {
         mocha: true,
     },
     extends: [
-        'airbnb-base',
-        'plugin:@typescript-eslint/recommended',
+        'airbnb-typescript/base',
         'plugin:unicorn/recommended',
         'prettier',
         'prettier/@typescript-eslint',
@@ -24,6 +23,12 @@ module.exports = {
     parserOptions: {
         ecmaVersion: 2020,
         sourceType: 'module',
+        project: [
+            './tsconfig.eslint.json',
+            './build/tsconfig.json',
+            './src/tsconfig.json',
+            './test/tsconfig.json',
+        ],
     },
     plugins: ['@typescript-eslint', 'unicorn'],
     settings: {

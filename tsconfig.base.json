@@ -3,9 +3,6 @@
         /* Basic Options */
         "target": "ES2019",
         "module": "commonjs",
-        "outDir": "out",
-        "sourceMap": true,
-        "rootDir": ".",
 
         /* Strict Type-Checking Options */
         "strict": true,
@@ -28,6 +25,5 @@
         /* Advanced Options */
         "forceConsistentCasingInFileNames": true,
         "skipLibCheck": true
-    },
-    "include": ["src", "typings"]
+    }
 }

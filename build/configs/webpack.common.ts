@@ -25,7 +25,7 @@ const commonWebpackConfig: Configuration = {
                 exclude: /node_modules/,
                 loader: 'ts-loader',
                 options: {
-                    configFile: resolve(projectRoot, 'tsconfig.json'),
+                    configFile: resolve(projectRoot, 'src/tsconfig.json'),
                 },
             },
         ],

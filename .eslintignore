@@ -1,4 +1,5 @@
-out/
-typings/
+node_modules
+build
+out
 test-fixture/
 .vscode-test/
