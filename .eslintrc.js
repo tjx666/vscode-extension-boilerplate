@@ -9,19 +9,14 @@ module.exports = {
         node: true,
         mocha: true,
     },
-    extends: [
-        'airbnb-typescript/base',
-        'plugin:unicorn/recommended',
-        'prettier',
-        'prettier/@typescript-eslint',
-    ],
+    extends: ['airbnb-typescript/base', 'plugin:unicorn/recommended', 'prettier'],
     globals: {
         Atomics: 'readonly',
         SharedArrayBuffer: 'readonly',
     },
     parser: '@typescript-eslint/parser',
     parserOptions: {
-        ecmaVersion: 2020,
+        ecmaVersion: 2021,
         sourceType: 'module',
         project: [
             './tsconfig.eslint.json',
@@ -58,10 +53,14 @@ module.exports = {
         ],
         'unicorn/import-style': OFF,
         'unicorn/no-abusive-eslint-disable': OFF,
+        'unicorn/no-array-for-each': OFF,
         'unicorn/no-process-exit': OFF,
+        'unicorn/prefer-module': OFF,
+        'unicorn/prefer-node-protocol': OFF,
         'unicorn/prevent-abbreviations': OFF,
 
         'func-names': OFF,
+        'max-classes-per-file': OFF,
         'no-bitwise': OFF,
         'no-console': OFF,
         'no-param-reassign': OFF,
