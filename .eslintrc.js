@@ -11,7 +11,12 @@ module.exports = {
         node: true,
         mocha: true,
     },
-    extends: ['airbnb-typescript/base', 'plugin:unicorn/recommended', 'prettier'],
+    extends: [
+        'eslint:recommended',
+        'plugin:@typescript-eslint/recommended',
+        'plugin:unicorn/recommended',
+        'prettier',
+    ],
     globals: {
         Atomics: 'readonly',
         SharedArrayBuffer: 'readonly',
@@ -19,22 +24,25 @@ module.exports = {
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaVersion: 2021,
-        sourceType: 'module'
+        sourceType: 'module',
     },
-    plugins: ['@typescript-eslint', 'unicorn'],
+    plugins: ['@typescript-eslint'],
     settings: {
         'import/resolver': {
             node: {
                 extensions: ['.ts', '.tsx', '.js', '.json'],
             },
             typescript: {
-                project: [resolve('./tsconfig.json'), resolve('./scripts/tsconfig.json'), resolve('./test/tsconfig.json')],
+                project: [
+                    resolve('./tsconfig.json'),
+                    resolve('./scripts/tsconfig.json'),
+                    resolve('./test/tsconfig.json'),
+                ],
             },
         },
     },
     rules: {
         'import/extensions': OFF,
-        'import/no-unresolved': [WARN, { ignore: ['vscode'] }],
 
         '@typescript-eslint/explicit-function-return-type': OFF,
         '@typescript-eslint/no-explicit-any': OFF,

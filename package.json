@@ -69,8 +69,9 @@
         ]
     },
     "lint-staged": {
-        "*.{ts}": [
-            "eslint -c .eslintrc"
+        "*.ts": [
+            "eslint -c .eslintrc.js",
+            "format-imports --config .vscode/import-sorter.json"
         ],
         "*.{ts,json,md}": [
             "prettier --write"
@@ -93,11 +94,12 @@
         "clean-webpack-plugin": "^4.0.0",
         "cross-env": "^7.0.3",
         "eslint": "^7.32.0",
-        "eslint-config-airbnb-base": "^14.2.1",
         "eslint-config-prettier": "^8.3.0",
         "eslint-import-resolver-typescript": "^2.5.0",
         "eslint-plugin-import": "2.24.2",
         "eslint-plugin-prettier": "^4.0.0",
+        "eslint-plugin-unicorn": "^36.0.0",
+        "format-imports": "^2.4.1",
         "glob": "^7.1.7",
         "husky": "7.0.2",
         "lint-staged": "^11.1.2",
