@@ -2,13 +2,18 @@ language: node_js
 os:
     - osx
     - linux
+cache:
+    npm: false
+    directories:
+        - '~/.pnpm-store'
+before_install:
+    - curl -f https://get.pnpm.io/v6.14.js | node - add --global pnpm@6
+    - pnpm config set store-dir ~/.pnpm-store
 install:
-    - |
-        if [ $TRAVIS_OS_NAME == "linux" ]; then
-          export DISPLAY=':99.0'
-          /usr/bin/Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
-        fi
-    - yarn
+    - if [ $TRAVIS_OS_NAME == "linux" ]; then
+        export DISPLAY=':99.0'
+        /usr/bin/Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
+      fi
+    - pnpm install
 script:
-    - yarn test
-cache: yarn
+    - pnpm test

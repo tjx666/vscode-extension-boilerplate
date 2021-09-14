@@ -54,7 +54,8 @@
         "build": "cross-env NODE_ENV=production ts-node --files -P ./scripts/tsconfig.json ./scripts",
         "build-analyze": "pnpm build -- --analyze",
         "lint": "eslint -c .eslintrc.js --ext .ts ./{scripts,src,test}/**/*.ts",
-        "test": "pnpm run test-compile && node ./out/test/runTests.js"
+        "test": "pnpm run test-compile && node ./out/test/runTests.js",
+        "prepare": "husky install"
     },
     "activationEvents": [
         "onCommand:VSCodeExtensionBoilerplate.helloVSCode"
@@ -66,11 +67,6 @@
                 "title": "Hello Visual Studio Code!"
             }
         ]
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged"
-        }
     },
     "lint-staged": {
         "*.{ts}": [
