@@ -1,3 +1,5 @@
+const { resolve } = require;
+
 const OFF = 0;
 const WARN = 1;
 const ERROR = 2;
@@ -17,19 +19,16 @@ module.exports = {
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaVersion: 2021,
-        sourceType: 'module',
-        project: [
-            './tsconfig.eslint.json',
-            './build/tsconfig.json',
-            './src/tsconfig.json',
-            './test/tsconfig.json',
-        ],
+        sourceType: 'module'
     },
     plugins: ['@typescript-eslint', 'unicorn'],
     settings: {
         'import/resolver': {
             node: {
-                extensions: ['.ts', '.js', '.json'],
+                extensions: ['.ts', '.tsx', '.js', '.json'],
+            },
+            typescript: {
+                project: [resolve('./tsconfig.json'), resolve('./scripts/tsconfig.json'), resolve('./test/tsconfig.json')],
             },
         },
     },
@@ -75,7 +74,7 @@ module.exports = {
             },
         },
         {
-            files: ['build/**/*.ts'],
+            files: ['scripts/**/*.ts'],
             rules: {
                 'import/no-extraneous-dependencies': OFF,
             },
