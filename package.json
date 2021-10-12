@@ -48,13 +48,13 @@
     ],
     "main": "out/extension.js",
     "scripts": {
-        "vscode:prepublish": "pnpm build",
+        "vscode:prepublish": "yarn build",
         "compile": "cross-env NODE_ENV=development ts-node --files -P ./scripts/tsconfig.json ./scripts",
         "test-compile": "tsc -p ./tsconfig.test.json",
         "build": "cross-env NODE_ENV=production ts-node --files -P ./scripts/tsconfig.json ./scripts",
-        "build-analyze": "pnpm build -- --analyze",
+        "build-analyze": "yarn build -- --analyze",
         "lint": "eslint -c .eslintrc.js --ext .ts ./{scripts,src,test}/**/*.ts",
-        "test": "pnpm run test-compile && node ./out/test/runTests.js",
+        "test": "yarn run test-compile && node ./out/test/runTests.js",
         "prepare": "husky install"
     },
     "activationEvents": [
@@ -78,7 +78,7 @@
         ]
     },
     "devDependencies": {
-        "@nuxtjs/friendly-errors-webpack-plugin": "^2.1.0",
+        "@nuxt/friendly-errors-webpack-plugin": "^2.5.1",
         "@types/glob": "^7.1.4",
         "@types/mocha": "^9.0.0",
         "@types/node": "^16.9.1",
