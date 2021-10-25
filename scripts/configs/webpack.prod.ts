@@ -1,10 +1,10 @@
-import yargs from 'yargs';
-import { BannerPlugin, Configuration } from 'webpack';
-import { merge } from 'webpack-merge';
-import TerserPlugin from 'terser-webpack-plugin';
 import SpeedMeasurePlugin from 'speed-measure-webpack-plugin';
+import TerserPlugin from 'terser-webpack-plugin';
+import { BannerPlugin, Configuration } from 'webpack';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
+import { merge } from 'webpack-merge';
 
+import args from './args';
 import commonWebpackConfig from './webpack.common';
 
 const mergedConfiguration: Configuration = merge(commonWebpackConfig, {
@@ -26,15 +26,8 @@ const mergedConfiguration: Configuration = merge(commonWebpackConfig, {
     },
 });
 
-// eslint-disable-next-line import/no-mutable-exports
 let prodWebpackConfiguration = mergedConfiguration;
-const argv = yargs(process.argv.slice(2))
-    .options({
-        analyze: { type: 'boolean', default: false },
-    })
-    .parseSync();
-
-if (argv.analyze) {
+if (args.analyze) {
     mergedConfiguration.plugins!.push(new BundleAnalyzerPlugin());
     const smp = new SpeedMeasurePlugin();
     prodWebpackConfiguration = smp.wrap(mergedConfiguration);

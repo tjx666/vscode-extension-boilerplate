@@ -6,7 +6,8 @@
         "esbenp.prettier-vscode",
         "yutengjing.view-github-repository",
         "yutengjing.open-in-external-app",
-        "yutengjing.vscode-fe-helper"
+        "yutengjing.vscode-fe-helper",
+        "amodio.tsl-problem-matcher"
     ],
     "unwantedRecommendations": [
         "hookyqr.beautify",

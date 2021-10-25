@@ -1,5 +1,5 @@
+import { runTests } from '@vscode/test-electron';
 import { resolve } from 'path';
-import { runTests } from 'vscode-test';
 
 (async function go() {
     const projectPath = resolve(__dirname, '../../');

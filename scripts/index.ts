@@ -1,12 +1,13 @@
-import webpack from 'webpack';
+import webpack, { Stats } from 'webpack';
 
+import args from './configs/args';
 import devWebpackConfig from './configs/webpack.dev';
 import prodWebpackConfig from './configs/webpack.prod';
 
 const isProd = process.env.NODE_ENV !== 'development';
 const compiler = webpack(isProd ? prodWebpackConfig : devWebpackConfig);
 
-compiler.run((error, stats) => {
+function handler(error?: Error, stats?: Stats) {
     if (error) {
         console.error(error);
         return;
@@ -18,7 +19,13 @@ compiler.run((error, stats) => {
     };
 
     console.log(stats?.toString(isProd ? prodStats : 'minimal'));
-});
+}
+
+if (args.watch) {
+    compiler.watch({}, handler);
+} else {
+    compiler.run(handler);
+}
 
 compiler.close((err) => {
     if (err) {
