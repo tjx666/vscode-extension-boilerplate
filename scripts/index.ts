@@ -26,9 +26,3 @@ if (args.watch) {
 } else {
     compiler.run(handler);
 }
-
-compiler.close((err) => {
-    if (err) {
-        console.error(err);
-    }
-});
