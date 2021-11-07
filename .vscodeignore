@@ -21,7 +21,6 @@ coverage/
 tsconfig.json
 tsconfig.test.json
 .nvmrc
-.editorconfig
 .eslintrc.js
 .eslintignore
 .prettierrc
