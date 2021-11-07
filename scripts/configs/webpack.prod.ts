@@ -28,7 +28,7 @@ const mergedConfiguration: Configuration = merge(commonWebpackConfig, {
 
 let prodWebpackConfiguration = mergedConfiguration;
 if (args.analyze) {
-    mergedConfiguration.plugins!.push(new BundleAnalyzerPlugin());
+    mergedConfiguration.plugins!.push(new BundleAnalyzerPlugin() as any);
     const smp = new SpeedMeasurePlugin();
     prodWebpackConfiguration = smp.wrap(mergedConfiguration);
 }
