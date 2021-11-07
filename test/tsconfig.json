@@ -1,7 +1,4 @@
 {
-    "extends": "../tsconfig.json",
-    "compilerOptions": {
-        "outDir": "../out"
-    },
+    "extends": "../tsconfig.base.json",
     "include": [".", "../src"]
 }

@@ -11,7 +11,6 @@ const commonWebpackConfig: Configuration = {
         level: 'log', // enables logging required for problem matchers
     },
     output: {
-        clean: true,
         library: {
             type: 'commonjs2',
         },
@@ -19,7 +18,7 @@ const commonWebpackConfig: Configuration = {
         filename: 'extension.js',
         devtoolModuleFilenameTemplate: '../[resource-path]',
     },
-    resolve: { extensions: ['.ts', '.js'] },
+    resolve: { extensions: ['.ts', '.js', '.json'] },
     externals: {
         vscode: 'commonjs vscode',
     },
@@ -30,7 +29,7 @@ const commonWebpackConfig: Configuration = {
                 exclude: /node_modules/,
                 loader: 'ts-loader',
                 options: {
-                    configFile: resolve(projectRoot, 'tsconfig.json'),
+                    configFile: resolve(projectRoot, 'src/tsconfig.json'),
                 },
             },
         ],

@@ -1,13 +1,12 @@
-import path from 'path';
-import Mocha from 'mocha';
 import glob from 'glob';
+import Mocha from 'mocha';
+import path from 'path';
 
 export function run(): Promise<void> {
     const mocha = new Mocha({ color: true });
     const testsRoot = path.resolve(__dirname, '..');
 
     return new Promise((resolve, reject) => {
-        // eslint-disable-next-line consistent-return
         glob('**/**.test.js', { cwd: testsRoot }, (err, files) => {
             if (err) {
                 return reject(err);

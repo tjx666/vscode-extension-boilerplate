@@ -34,7 +34,7 @@ module.exports = {
             },
             typescript: {
                 project: [
-                    resolve('./tsconfig.json'),
+                    resolve('./src/tsconfig.json'),
                     resolve('./scripts/tsconfig.json'),
                     resolve('./test/tsconfig.json'),
                 ],

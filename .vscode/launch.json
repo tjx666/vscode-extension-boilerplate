@@ -19,9 +19,9 @@
             "request": "launch",
             "args": [
                 "--extensionDevelopmentPath=${workspaceFolder}",
-                "--extensionTestsPath=${workspaceFolder}/out/test/index"
+                "--extensionTestsPath=${workspaceFolder}/dist/test/index"
             ],
-            "outFiles": ["${workspaceFolder}/out/**/*.js", "${workspaceFolder}/dist/**/*.js"],
+            "outFiles": ["${workspaceFolder}/dist/**/*.js"],
             "preLaunchTask": "tasks: watch-tests"
         }
     ]
