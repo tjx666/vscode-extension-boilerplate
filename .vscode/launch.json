@@ -11,6 +11,11 @@
             "request": "launch",
             "args": ["--extensionDevelopmentPath=${workspaceFolder}"],
             "outFiles": ["${workspaceFolder}/dist/**/*.js"],
+            "skipFiles": [
+                "<node_internals>/**",
+                "**/node_modules/**",
+                "**/resources/app/out/vs/**"
+            ],
             "preLaunchTask": "${defaultBuildTask}"
         },
         {
@@ -22,6 +27,11 @@
                 "--extensionTestsPath=${workspaceFolder}/dist/test/index"
             ],
             "outFiles": ["${workspaceFolder}/dist/**/*.js"],
+            "skipFiles": [
+                "<node_internals>/**",
+                "**/node_modules/**",
+                "**/resources/app/out/vs/**"
+            ],
             "preLaunchTask": "tasks: watch-tests"
         }
     ]
