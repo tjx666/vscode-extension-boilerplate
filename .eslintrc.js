@@ -61,6 +61,7 @@ module.exports = {
         'unicorn/import-style': OFF,
         'unicorn/no-abusive-eslint-disable': OFF,
         'unicorn/no-array-for-each': OFF,
+        'unicorn/no-null': OFF,
         'unicorn/no-process-exit': OFF,
         'unicorn/prefer-module': OFF,
         'unicorn/prefer-node-protocol': OFF,

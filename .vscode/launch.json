@@ -16,6 +16,7 @@
                 "**/node_modules/**",
                 "**/resources/app/out/vs/**"
             ],
+            "sourceMaps": true,
             "preLaunchTask": "${defaultBuildTask}"
         },
         {
@@ -24,7 +25,8 @@
             "request": "launch",
             "args": [
                 "--extensionDevelopmentPath=${workspaceFolder}",
-                "--extensionTestsPath=${workspaceFolder}/dist/test/index"
+                "--extensionTestsPath=${workspaceFolder}/dist/test",
+                "${workspaceFolder}/test-fixture"
             ],
             "outFiles": ["${workspaceFolder}/dist/**/*.js"],
             "skipFiles": [
@@ -32,6 +34,7 @@
                 "**/node_modules/**",
                 "**/resources/app/out/vs/**"
             ],
+            "sourceMaps": true,
             "preLaunchTask": "tasks: watch-tests"
         }
     ]
