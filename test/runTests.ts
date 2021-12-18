@@ -4,7 +4,7 @@ import { resolve } from 'path';
 (async function go() {
     const projectPath = resolve(__dirname, '../../');
     const extensionDevelopmentPath = projectPath;
-    const extensionTestsPath = resolve(projectPath, './dist/test/index.js');
+    const extensionTestsPath = resolve(projectPath, './dist/test');
     const testWorkspace = resolve(projectPath, './test-fixture');
 
     try {
