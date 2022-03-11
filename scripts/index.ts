@@ -7,7 +7,7 @@ import prodWebpackConfig from './configs/webpack.prod';
 const isProd = process.env.NODE_ENV !== 'development';
 const compiler = webpack(isProd ? prodWebpackConfig : devWebpackConfig);
 
-function handler(error?: Error, stats?: Stats) {
+function handler(error?: Error | null | undefined, stats?: Stats) {
     if (error) {
         console.error(error);
         return;

@@ -1,5 +1,5 @@
 node_modules
 out
-test-fixture/
+test-workspace/
 .vscode-test/
 scripts/typings

@@ -5,11 +5,11 @@ import { resolve } from 'path';
     const projectPath = resolve(__dirname, '../../');
     const extensionDevelopmentPath = projectPath;
     const extensionTestsPath = resolve(projectPath, './dist/test');
-    const testWorkspace = resolve(projectPath, './test-fixture');
+    const testWorkspace = resolve(projectPath, './test-workspace');
 
     try {
         await runTests({
-            version: 'stable',
+            version: 'insiders',
             extensionDevelopmentPath,
             extensionTestsPath,
             launchArgs: [testWorkspace],
