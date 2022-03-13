@@ -14,7 +14,7 @@
             "skipFiles": [
                 "<node_internals>/**",
                 "**/node_modules/**",
-                "**/resources/app/out/vs/**"
+                "**/Resources/app/out/vs/**"
             ],
             "sourceMaps": true,
             "preLaunchTask": "${defaultBuildTask}"
@@ -32,7 +32,7 @@
             "skipFiles": [
                 "<node_internals>/**",
                 "**/node_modules/**",
-                "**/resources/app/out/vs/**"
+                "**/Resources/app/out/vs/**"
             ],
             "sourceMaps": true,
             "preLaunchTask": "tasks: watch-tests"
