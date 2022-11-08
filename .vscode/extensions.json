@@ -3,7 +3,6 @@
     "recommendations": [
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
-        "yutengjing.view-github-repository",
         "yutengjing.open-in-external-app",
         "yutengjing.vscode-fe-helper",
         "amodio.tsl-problem-matcher"
